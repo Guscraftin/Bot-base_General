@@ -10,13 +10,13 @@ module.exports = {
         let isTeamOwner = false;
         let owner = "Aucun";
         await interaction.client.application.fetch().then(function(bot) {
-            if (bot.owner.tag !== undefined) {
-                owner = `▸ ${bot.owner.tag}`
+            if (bot.owner.username !== undefined) {
+                owner = `▸ [${bot.owner.username}](https://discord.com/users/${bot.owner.id})`
             } else {
                 isTeamOwner = true;
                 owner = "";
                 bot.owner.members.forEach(member => {
-                    owner += `▸ ${member.user.tag}\n`;
+                    owner += `▸ [${bot.owner.username}](https://discord.com/users/${bot.owner.id})\n`;
                 });
             }
         });
