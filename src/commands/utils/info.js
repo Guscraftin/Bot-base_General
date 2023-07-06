@@ -16,7 +16,7 @@ module.exports = {
                 isTeamOwner = true;
                 owner = "";
                 bot.owner.members.forEach(member => {
-                    owner += `▸ [${bot.owner.username}](https://discord.com/users/${bot.owner.id})\n`;
+                    owner += `▸ [${member.user.username}](https://discord.com/users/${member.user.id})\n`;
                 });
             }
         });
