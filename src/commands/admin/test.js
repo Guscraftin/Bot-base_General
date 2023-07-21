@@ -37,7 +37,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setTitle('Embed Test')
-            .setDescription("Voici un bouton ci dessous qui doit réopndre une phrase.")
+            .setDescription("Voici un bouton ci dessous qui doit répondre une phrase.")
             .setColor('DarkAqua')
             .setTimestamp()
             .setFooter({ text: interaction.user.username, iconURL: interaction.user.displayAvatarURL() });
