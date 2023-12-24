@@ -40,10 +40,17 @@ module.exports = async (client) => {
         try {
             console.log(`Lancement du déploiement des ${commands.length} slash commandes (/).`);
     
+            // Deploy our commands to one guild
             const data = await rest.put(
                 Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
                 { body: commands },
             );
+
+            // Deploy our commands globally
+            // const data = await rest.put(
+            //     Routes.applicationCommands(process.env.CLIENT_ID),
+            //     { body: commands },
+            // );
     
             console.log(`Déploiement des ${data.length} slash commandes (/) réussit.`);
         } catch (error) {
